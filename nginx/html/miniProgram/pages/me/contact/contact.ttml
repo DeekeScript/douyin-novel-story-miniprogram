@@ -1,0 +1,8 @@
+<!-- c:\Users\Administrator\miniprograms\main\pages\me\contact\contact.ttml -->
+<view class="container">
+    <view style="text-align: center;">
+        <image src="{{imageBaseUrl+item.Values.Url}}" mode="widthFix"></image>
+    </view>
+    <view>联系微信：{{item.Values.Weixin}}</view>
+    <view>联系电话：{{item.Values.Mobile}}</view>
+</view>

@@ -1,0 +1,19 @@
+<!-- c:\Users\Administrator\miniprograms\main\pages\me\getMoney\getMoney.ttml -->
+<view class="container">
+    <view class="profit" style="margin-top:12rpx;">
+        <view>
+            <view>待提现：￥{{userInfo.WaitRechargeMoney}}</view>
+            <view style="color: #666666;margin-top: 24rpx;font-size: 16px;">累计收益：￥{{userInfo.RechargeMoney}}</view>
+        </view>
+        <view>
+            <button bindtap="recharge" size="mini">提现</button>
+            <view bindtap="gotoDetail" style="color: #666666;font-size: 14px;margin-top: 24rpx;">收益详情</view>
+        </view>
+    </view>
+    <view class="detail">
+        <view>如何获得收益？</view>
+        <view>1.在书籍详情页/阅读页点击“分享赚钱”，获客口令。</view>
+        <view>2.在抖音短视频分享该口令，邀请好友复制口令。</view>
+        <view>3.好友在本小程序中粘贴口令，阅读书籍并且完成充值后，你将获得相应收益。</view>
+    </view>
+</view>

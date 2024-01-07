@@ -1,0 +1,24 @@
+<!-- c:\Users\Administrator\miniprograms\main\pages\me\profile\profile.ttml -->
+<view class="container">
+    <form bindsubmit="submit">
+        <view class="profile">
+            <view class="head">
+                <view>头像</view>
+                <view bindtap="chooseImage">
+                    <image src="{{imageBaseUrl+(avatar || userInfo.Avatar || setting.Values.Avatar)}}" mode="widthFix">
+                    </image>
+                </view>
+            </view>
+
+            <view class="nickname">
+                <view>昵称</view>
+                <view><input name="nickname" style="text-align: right;color: #000000;" value="{{userInfo.Nickname}}" />
+                </view>
+            </view>
+        </view>
+        <view style="padding:12px 0; color: #999999;">昵称限2-32个字符，一个汉字为3个字符</view>
+        <view>
+            <button formType="submit" style="width: 100%;" type="primary" size="mini">提交</button>
+        </view>
+    </form>
+</view>

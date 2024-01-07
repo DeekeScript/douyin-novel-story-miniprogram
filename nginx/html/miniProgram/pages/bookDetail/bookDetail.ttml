@@ -1,0 +1,58 @@
+<!-- c:\Users\Administrator\miniprograms\main\pages\bookDetail\bookDetail.ttml -->
+<view class="container" style="background-color: {{isNight?'#000000':'#F8F8F8'}};">
+    <view class="text">
+        <rich-text
+            style="color:{{isNight?'#F8F8F8':'#000000'}};font-size: {{textSize}}px;line-height: {{textSize*1.4}}px;"
+            nodes="{{item.content}}"></rich-text>
+        <view tt:if="{{item.content}}" class="page">
+            <button tt:if="{{index>1}}" data-type="-1" size="mini" bindtap="read">阅读上一章</button>
+            <button tt:if="{{index<totalChapter}}" data-type="1" size="mini" bindtap="read">阅读下一章</button>
+        </view>
+    </view>
+
+    <!-- <view class="member" tt:if="{{!canRead}}">
+        <view class="baseTitle">
+            <span>最低{{miniPrice}}元/天</span>
+            <span>开通会员，继续阅读</span>
+        </view>
+        <pay data-type="1"></pay>
+        <pay data-type="0" bindmyevent="onMyEvent"></pay>
+    </view> -->
+
+    <view class="bottom"
+        style="background-color: {{isNight?'#000000':'#F8F8F8'}};color:{{isNight?'#CCCCCC':'#333333'}};border-top-color: {{isNight?'#000000':'#F8F8F8'}};">
+        <view class="func" tt:if="{{changeTextSizeShow}}">
+            <view>16</view>
+            <view style="background-color: {{isNight?'#000000':'#F8F8F8'}};color:  {{isNight?'#CCCCCC':'#333333'}};">
+                <slider value="{{textSize}}" catch:change="slider2change" step="1" disabled="{{false}}"
+                    background-color="{{!isNight?'#e9e9e9':'#dddddd'}}" active-color="{{!isNight?'#1aad19':'#1aad19'}}"
+                    block-size="50" min="16" max="50" block-color="#ffffff" show-value="{{true}}"
+                    bind:changing="bindchanging" />
+            </view>
+            <view>50</view>
+        </view>
+        <view class="tab" style="color:  {{isNight?'#CCCCCC':'#333333'}};">
+            <view data-url="/pages/bookCity/bookCity" class="bookCity" bindtap="switchTab">
+                <view><span class="iconfont icon-shuben"></span></view>
+                <view>书城</view>
+            </view>
+            <view bindtap="gotoBack" class="detail">
+                <view><span class="iconfont icon-chakanxiangqing1"></span></view>
+                <view>详情</view>
+            </view>
+            <view bindtap="setNight" class="exchange">
+                <!--icon-baitian-->
+                <view><span class="iconfont {{isNight?'icon-yejian':'icon-baitian'}}"></span></view>
+                <view>{{isNight?'夜间':'白天'}}</view>
+            </view>
+            <view bindtap="showTextSizeShow" class="fontSize">
+                <view><span class="iconfont icon-zitidaxiao1"></span></view>
+                <view>字号</view>
+            </view>
+            <view class="booksCenter">
+                <view><span class="iconfont icon-jiashujia-weijiashujia"></span></view>
+                <view>已在书架</view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,17 @@
+<!-- c:\Users\Administrator\miniprograms\main\pages\login\login.ttml -->
+<view class="container">
+    <view class="title">快捷登录注册</view>
+    <view class="btn">
+        <button bindtap="login" type="primary">立即登录</button>
+        <view bindtap="mobileLogin" class="text">抖音手机号登录/注册</view>
+    </view>
+    <view class="read">
+        <checkbox-group bindchange="agress">
+            <checkbox value="1" name="agress" checked="{{checked}}">
+                <span>我已阅读并同意</span>
+                <span bindtap="gotoView" data-type="service_agress" style="color: brown;">《服务协议》</span>
+                <span bindtap="gotoView" data-type="user_info" style="color: brown;">《隐私政策》</span>
+            </checkbox>
+        </checkbox-group>
+    </view>
+</view>

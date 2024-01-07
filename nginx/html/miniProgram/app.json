@@ -1,0 +1,69 @@
+{
+    "pages": [
+        "pages/myBooks/myBooks",
+        "pages/bookCity/bookCity",
+        "pages/books/books",
+        "pages/me/me",
+        "pages/me/watchRecord/watchRecord",
+        "pages/me/getMoney/getMoney",
+        "pages/me/shareCode/shareCode",
+        "pages/me/notice/notice",
+        "pages/me/contact/contact",
+        "pages/me/pay/pay",
+        "pages/bookDetail/bookDetail",
+        "pages/detail/detail",
+        "pages/me/profile/profile",
+        "pages/search/search",
+        "pages/login/login",
+        "pages/me/rechargeDetail/rechargeDetail",
+        "pages/me/consume/consume",
+        "pages/me/payMoneyRecord/payMoneyRecord"
+    ],
+    "entryPagePath": "pages/bookCity/bookCity",
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "嘀客小说",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "color": "#8a8a8a",
+        "selectedColor": "#dd6572",
+        "borderStyle": "black",
+        "list": [
+            {
+                "pagePath": "pages/myBooks/myBooks",
+                "text": "书架",
+                "iconPath": "images/tabBar/myBooksBase.png",
+                "selectedIconPath": "images/tabBar/myBooks.png"
+            },
+            {
+                "pagePath": "pages/bookCity/bookCity",
+                "text": "书城",
+                "iconPath": "images/tabBar/bookCityBase.png",
+                "selectedIconPath": "images/tabBar/bookCity.png"
+            },
+            {
+                "pagePath": "pages/books/books",
+                "text": "书库",
+                "iconPath": "images/tabBar/booksBase.png",
+                "selectedIconPath": "images/tabBar/books.png"
+            },
+            {
+                "pagePath": "pages/me/me",
+                "text": "我的",
+                "iconPath": "images/tabBar/meBase.png",
+                "selectedIconPath": "images/tabBar/me.png"
+            }
+        ]
+    },
+    "networkTimeout": {
+        "request": 60000,
+        "connectSocket": 60000,
+        "uploadFile": 60000,
+        "downloadFile": 60000
+    },
+    "cookie": {
+        "enableStore": true
+    }
+}

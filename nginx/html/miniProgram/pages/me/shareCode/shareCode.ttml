@@ -1,0 +1,8 @@
+<!-- c:\Users\Administrator\miniprograms\main\pages\me\shareCode\shareCode.ttml -->
+<view class="container">
+    <form bindsubmit="shareCode">
+        <view>请输入邀请码</view>
+        <view><input disabled="{{shareCode!=''}}" value="{{shareCode||''}}" name="code" placeholder="输入邀请码" /></view>
+        <view><button tt:if="{{shareCode==''}}" formType="submit" type="primary">确定</button></view>
+    </form>
+</view>

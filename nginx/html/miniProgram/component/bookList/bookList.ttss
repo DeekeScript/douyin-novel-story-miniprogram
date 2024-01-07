@@ -1,0 +1,197 @@
+/* c:\Users\Administrator\miniprograms\main\component\bookList\bookList.ttss */
+.bookList {
+    background-color: #ffffff;
+    padding: 12px;
+    border-radius: 12px;
+    margin-top: 16px;
+}
+
+.bookList .top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 12px;
+}
+
+.bookList .top .h2 {
+    font-size: 18px;
+    color: #000000;
+}
+
+.bookList .top .change {
+    font-size: 13px;
+    color: #000000;
+}
+
+.bookList .book {
+    display: flex;
+    margin-bottom: 12px;
+}
+
+.bookList .book .bookImage {
+    flex: 0 0 23%;
+}
+
+.bookList .book .bookImage image {
+    width: 100%;
+    border-radius: 12rpx;
+}
+
+.bookList .book .bookDetail {
+    margin-left: 24rpx;
+    padding-bottom: 12rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0 0 75%;
+    height: 100%;
+}
+
+.bookList .book .bookDetail .title {
+    font-size: 16px;
+    color: #000000;
+}
+
+.bookList .book .bookDetail .content {
+    font-size: 13px;
+    line-height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.bookList .bookBottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.bookList .bookBottom .book {
+    display: flex;
+    flex: 0 0 23%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bookList .bookBottom .book .bookImage image {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.bookList .bookBottom .book .title {
+    margin: 18rpx 0;
+    color: #000000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+
+
+.bookList .goodBook {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.bookList .goodBook .book {
+    width: calc(50% - 6px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    padding: 12px 0;
+    margin-bottom: 12px;
+    background-color: #f8f8f8;
+    border-radius: 6px;
+}
+
+.bookList .goodBook .book view:nth-child(n+2) {
+    margin-top: 12px;
+}
+
+.bookList .goodBook .book .bookImage {
+    width: 50%;
+    margin: auto;
+}
+
+.bookList .goodBook .book .title {
+    color: #000000;
+}
+
+.bookList .goodBook .book .type span {
+    margin-right: 12rpx;
+}
+
+.bookList .goodBook .book .content {
+    font-size: 13px;
+    padding: 0 6px;
+    color: #999999;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+.bookList .goodBook .book:nth-child(4n+1),.bookList .goodBook .book:nth-child(4n) {
+    background-color: #edefdf;
+}
+
+.bookList .rankList {
+    align-items: center;
+    justify-content: center;
+}
+
+.bookList .rankList .rank {
+    font-size: 15px;
+    margin-right: 12px;
+}
+
+.bookList .cate,
+.bookList .sort {
+    display: flex;
+    flex-direction: row;
+}
+
+.bookList .cate view:nth-child(n+2),
+.bookList .sort view:nth-child(n+2) {
+    margin-left: 12px;
+    margin-top: -2px;
+}
+
+.bookList .sort {
+    margin-top: 12px;
+}
+
+.bookList .topTitle {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    margin-left: -48rpx;
+    color: #939309;
+    position: relative;
+}
+
+.bookList .topTitle view:nth-child(2) {
+    position: absolute;
+    top: -12px;
+    width: 100%;
+    text-align: center;
+}
+
+.bookList .topTitle view:nth-child(2) span {
+    margin: auto;
+    background-color: #ffffff;
+    padding: 0 12px;
+}
+
+.bookList .topTitle view:nth-child(1) {
+    border-top: #939309 solid 1px;
+    margin-top: 12px;
+    width: 100%;
+}

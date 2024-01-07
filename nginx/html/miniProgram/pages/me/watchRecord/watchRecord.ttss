@@ -1,0 +1,93 @@
+/* c:\Users\Administrator\miniprograms\main\pages\me\watchRecord\watchRecord.ttss */
+.container {
+    background-color: #ffffff;
+    padding: 24rpx;
+    margin: 24rpx;
+    border-radius: 24rpx;
+    width: auto;
+    height: auto;
+}
+
+.container .book {
+    display: flex;
+    flex-direction: row;
+}
+
+.container .book:nth-child(n+2) {
+    margin-top: 20px;
+}
+
+.container .book .bookImage {
+    width: 160rpx;
+    position: relative;
+}
+
+.container .book .select {
+    position: absolute;
+    left: calc(100% - 32px);
+    bottom: 12px;
+}
+
+.container .book .bookImage image {
+    width: 100%;
+}
+
+.container .book .bookDetail {
+    margin-left: 12px;
+    width: calc(100% - 180rpx);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.container .book .bookDetail .title {
+    font-size: 16px;
+    color: #000000;
+}
+
+.container .book .bookDetail .content {
+    font-size: 13px;
+    color: #999999;
+
+    line-height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.container .book .bookDetail .tag span {
+    margin-right: 8px;
+}
+
+.container .operate {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.operateParent {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 18px;
+    background-color: #ffffff;
+    border-top: #f0f0f0 solid 1px;
+}
+
+.operateParent .edit {
+    display: flex;
+    width: calc(100% - 36px);
+    justify-content: space-around;
+}
+
+.operateParent .edit view {
+    width: 100%;
+}
+
+.operateParent .edit view button {
+    width: calc(100% - 12px);
+}

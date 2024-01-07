@@ -1,0 +1,67 @@
+<view class="container">
+    <view class="member">
+        <view class="member-main">
+            <view class="head">
+                <image bindtap="gotoLogin" tt:if="{{userInfo}}" mode="widthFix"
+                    src="{{imageBaseUrl+(userInfo.Avatar || setting.Values.Avatar)}}"></image>
+                <view tt:if="{{!userInfo}}" style="padding-top: 60rpx;">
+                    <span style="font-size: 130rpx;color: #999999;" class="iconfont icon-wode"></span>
+                </view>
+            </view>
+            <view class="detail">
+                <view class="title" bindtap="gotoLogin">
+                    {{userInfo?userInfo.Nickname:'登录/注册'}}
+                </view>
+                <view class="id" bindtap="gotoLogin">
+                    <span tt:if="{{userInfo}}" style="color:{{!vipShow?'#339933':'#666666'}};">
+                        用户ID：{{userInfo.Uid}}
+                    </span>
+                    <span tt:else>立即体验</span>
+                    <span catch:tap="copy" tt:if="{{userInfo}}" style="font-size: 14px;padding-left: 18rpx;"
+                        class="iconfont icon-fuzhi3"></span>
+                </view>
+            </view>
+        </view>
+        <view class="vip">
+            <view bindtap="vip" tt:if="{{vipShow}}" style="text-align: right;">
+                <span class="iconfont icon-VIP" style="font-size: 64rpx; color: #ff3333;"></span>
+            </view>
+        </view>
+    </view>
+
+    <view class="pay" tt:if="{{!vipShow}}">
+        <image src="{{imageBaseUrl+setting.Values.Open_member_url}}" mode="widthFix" data-url="/pages/me/pay/pay"
+            bindtap="navigateTo"></image>
+    </view>
+
+    <view class="money">
+        <view class="coin" bindtap="consumeRecord">
+            <view><span style="font-size: 36rpx;" class="iconfont icon-jinbi1"></span>{{userInfo.PayCoin}}</view>
+            <view>累计消耗</view>
+        </view>
+        <view class="coin">
+            <view style="color: #aaaa33;"><span style="font-size: 36rpx;" class="iconfont icon-jinbi1"></span>{{userInfo.Money}}</view>
+            <view style="color: #aaaa33;">剩余书币</view>
+        </view>
+        <view bindtap="payRecord" class="coin">
+            <view>￥{{userInfo.PayMoney}}</view>
+            <view>累计充值</view>
+        </view>
+    </view>
+
+    <view class="list">
+        <block tt:for="{{[
+            ['icon-shu', '阅读记录', '/pages/me/watchRecord/watchRecord'],
+            ['icon-wanfenshouyi', '收益提现', "/pages/me/getMoney/getMoney"], ['icon-yaoqing', '邀请码'
+            ,'/pages/me/shareCode/shareCode'], ['icon-tongzhizhongxin', '通知公告' ,'/pages/me/notice/notice'],
+            ['icon-kefu3', '联系客服' ,'/pages/me/contact/contact'] ]}}">
+            <view data-url={{item[2]}} class="content" bindtap="navigateTo">
+                <view>
+                    <span class="iconfont {{item[0]}}"></span>
+                    <span>{{item[1]}}</span>
+                </view>
+                <view class="next"><span class="iconfont icon-qianjin2"></span></view>
+            </view>
+        </block>
+    </view>
+</view>

@@ -1,0 +1,93 @@
+.member {
+  height: 88px;
+  display: flex;
+  background-color: #ffffff;
+  justify-content: space-between;
+}
+
+.member .member-main {
+  display: flex;
+}
+
+.member .vip {
+  padding-top: 24rpx;
+  padding-right: 24rpx;
+}
+
+.member .detail {
+  margin-left: 12rpx;
+  margin-top: 16px;
+}
+
+.member .detail .title {
+  font-size: 16px;
+  color: #000000;
+}
+
+.member .detail .id {
+  margin-top: 4px;
+}
+
+.member image {
+  width: 100rpx;
+  margin-top: 32rpx;
+  margin-left: 12rpx;
+  border-radius: 80rpx;
+}
+
+.money {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 24rpx;
+  font-size: 32rpx;
+  text-align: center;
+}
+
+.money .coin view:nth-child(1) {
+  font-weight: bolder;
+}
+
+.money .coin view:nth-child(2) {
+  color: #666666;
+  margin-top: 6rpx;
+  font-size: 26rpx;
+}
+
+.pay {
+  width: 100%;
+  margin-top: 12px;
+  max-height: 250rpx;
+}
+
+.pay image {
+  width: 100%;
+}
+
+.list {
+  background-color: #ffffff;
+  margin-top: 12px;
+}
+
+.list .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 16px 12px;
+  border-bottom: #f0f0f0 solid 1px;
+}
+
+.list .content span {
+  font-size: 20px;
+  color: #333333;
+  margin-right: 12px;
+}
+
+.list .content span:nth-child(2) {
+  color: #333333;
+  font-size: 16px;
+}
+
+.list .content .next span {
+  color: #666666;
+}

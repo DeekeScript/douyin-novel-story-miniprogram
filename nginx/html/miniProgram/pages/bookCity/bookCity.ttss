@@ -1,0 +1,70 @@
+.container {
+  width: auto;
+  height: 100%;
+  position: relative;
+}
+
+.search {
+  background-color: #ffffff !important;
+  border-radius: 48rpx;
+  display: flex;
+}
+
+.container .viewing {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+
+.container .viewing .content {
+  margin: auto;
+  background-color: #1b0d0d;
+  height: 124rpx;
+  width: calc(100% - 72rpx);
+  border-radius: 12rpx;
+  position: relative;
+}
+
+.container .viewing .content .close {
+  color: #ffffff;
+  font-size: 24rpx;
+  position: absolute;
+  right: 4rpx;
+  top: 4rpx;
+}
+
+.container .viewing .content .detail {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container .viewing .content .detail .book{
+  display: flex;
+  justify-content: space-between;
+}
+
+.container .viewing .content .detail .image {
+  padding: 12rpx 0 12rpx 12rpx;
+  height: calc(100% - 24rpx);
+}
+
+.container .viewing .content .detail .image image {
+  height: 100% !important;
+}
+
+.container .viewing .content .detail .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 36rpx;
+  color: #ffffff;
+}
+
+.container .viewing .content .detail .read {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 68rpx;
+}

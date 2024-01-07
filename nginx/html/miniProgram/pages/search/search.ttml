@@ -1,0 +1,11 @@
+<scroll-view class="container" scroll-y="true" bindscrolltolower="scrolls">
+    <form bindsubmit="formSubmit">
+        <view class="input-block search">
+            <span class="iconfont icon-sousuo" style="font-size: 64rpx;color: #8a8a8a;margin: 24rpx 16rpx;"></span>
+            <input name="search" class="ttui-input" maxlength="50" placeholder="搜索书名/口令码" />
+            <button formType="submit" type="primary">搜索</button>
+        </view>
+    </form>
+
+    <bookList tt:ref="refList" data-search={{search}} data-title="热门推荐" data-type="5"></bookList>
+</scroll-view>

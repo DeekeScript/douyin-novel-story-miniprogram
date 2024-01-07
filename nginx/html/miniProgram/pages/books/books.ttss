@@ -1,0 +1,25 @@
+.container{
+  background-color: #ffffff;
+  width: auto;
+}
+
+.container .swiper-item{
+  margin: 0 -12px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+.search {
+  background-color: #ffffff!important;
+  border-radius: 48rpx;
+  display: flex;
+  position: absolute;
+  top:56px;
+  width: calc(100% - 24px);
+  position: fixed;
+}
+
+.swiper-item{
+  display: block;
+}

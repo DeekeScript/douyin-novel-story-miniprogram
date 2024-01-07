@@ -1,0 +1,48 @@
+/* c:\Users\Administrator\miniprograms\main\component\mayLike\mayLike.ttss */
+.container {
+    padding: 0;
+    height: auto;
+}
+
+.container .mayLike {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container .mayLike view:first-child {
+    font-size: 18px;
+    color: #000000;
+}
+
+.container .mayLike view:nth-child(2) {
+    color: #666666;
+}
+
+.container .list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container .list .content {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 23%;
+}
+
+.container .list .content view:first-child image {
+    width: 100%;
+}
+
+.container .list .content view:nth-child(2) {
+    text-align: center;
+    color: #000000;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}

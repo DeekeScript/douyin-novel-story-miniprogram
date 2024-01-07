@@ -1,0 +1,85 @@
+/* c:\Users\Administrator\miniprograms\main\component\myBookList\myBookList.ttss */
+.myBookList{
+    margin: 12px;
+    background-color: #f8f8f8;
+    width: auto;
+    height: 100%;
+}
+
+.myBookList .edit{
+    display: flex;
+    padding: 24rpx 0;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.myBookList .content{
+    display: flex;
+    color: #000000;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 32rpx;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 12px;
+}
+
+.myBookList .content:after { 
+    content: ''; 
+    width: 30%;
+}
+
+.myBookList .content view{
+    flex: 0 0 30%;
+    flex-direction: column;
+    position: relative;
+    margin: 8rpx 0;
+}
+
+.myBookList .content view .bookImage image{
+    width: 100%;
+    border-radius: 12rpx;
+}
+
+.myBookList .content view .title{
+    width: 100%;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
+.myBookList .content view .select{
+    width: 100%;
+    position: absolute;
+    left: calc(100% - 60rpx);
+    bottom: 80rpx;
+}
+
+.myBookList .operateParent{
+    position:fixed;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 24px);
+    padding: 20px 0 12px 12px;
+    background-color: #ffffff;
+}
+
+.myBookList .operateParent .operate{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.myBookList .operateParent .operate view{
+    width: 50%;
+}
+
+.myBookList .operateParent .operate view button{
+    width: 100%;
+}
+
+.myBookList .operateParent .operate view:nth-child(2n){
+    margin-left: 12px;
+}

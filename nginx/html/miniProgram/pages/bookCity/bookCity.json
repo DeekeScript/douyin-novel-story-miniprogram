@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "书城",
+    "usingComponents": {
+        "bookList": "/component/bookList/bookList"
+    }
+}

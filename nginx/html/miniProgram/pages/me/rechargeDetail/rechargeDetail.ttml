@@ -1,0 +1,30 @@
+<!-- c:\Users\Administrator\miniprograms\main\pages\me\rechargeDetail\rechargeDetail.ttml -->
+<scroll-view class="container" scroll-y="true" bindscrolltolower="scrolls">
+    <block tt:for="{{items}}">
+        <view class="items">
+            <view class="main">
+                <view class="profile">
+                    <view class="avatar">
+                        <image mode="widthFix" src="{{imageBaseUrl + (setting.Values.Avatar || item.Avatar)}}"></image>
+                    </view>
+                    <view class="nickname">
+                        <view>用户ID：{{item.Uid}}</view>
+                        <view>昵称：{{item.Nickname}}</view>
+                    </view>
+                </view>
+
+                <view style="color: #ff3333; font-size: 16px;">收益：￥{{item.KoulingMoney/100}}</view>
+            </view>
+            <view class="time">
+                <view>口令：{{item.Kouling}}</view>
+                <view>时间：{{item.CreatedAtShow}}</view>
+            </view>
+        </view>
+    </block>
+    <view tt:if="{{!items || items.length===0}}">
+        <view style="text-align: center;font-size: 100rpx;color: #dddddd;padding-top:80rpx;"
+            class="iconfont icon-sousuowenjian"></view>
+        <view style="text-align: center;font-size: 24rpx;color: #999999;padding-bottom: 80rpx;padding-top: 36rpx;">
+            暂无结果</view>
+    </view>
+</scroll-view>

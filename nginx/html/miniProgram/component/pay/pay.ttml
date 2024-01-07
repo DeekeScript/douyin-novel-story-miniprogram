@@ -1,0 +1,29 @@
+<!-- c:\Users\Administrator\miniprograms\main\component\pay\pay.ttml -->
+<view tt:if="{{dataType==1}}" class="pay-list">
+    <block tt:for="{{items}}">
+        <view bindtap="pay" data-pattern="{{item.Pattern}}" data-index="{{index}}" data-id="{{item.Id}}"
+            class="content {{index==payIndex?'active':''}}">
+            <view tt:if="{{item.ShortTitle}}" class="tag">{{item.ShortTitle}}</view>
+            <view class="title">{{item.Title}}</view>
+            <view class="money">
+                <span style="font-size: 52rpx;color: #999933;" class="iconfont icon-jinbi1"></span>
+                <span>{{item.Coin}}</span>
+            </view>
+            <view style="text-align: center; margin-top:12rpx;" tt:if="{{item.GiveCoin}}">额外赠送 {{item.GiveCoin}}</view>
+            <view style="color: #333333;text-align: center;margin-top: 12rpx;font-weight: bold;">￥{{item.Price}}</view>
+        </view>
+    </block>
+</view>
+
+<view tt:if="{{dataType==0}}" class="pay-list">
+    <block tt:for="{{items}}">
+        <view bindtap="pay" data-pattern="{{item.Pattern}}" data-index="{{index}}" data-id="{{item.Id}}"
+            class="content {{index==payIndex?'active':''}}">
+            <view tt:if="{{item.ShortTitle}}" class="tag">{{item.ShortTitle}}</view>
+            <view class="title">{{item.Title}}</view>
+            <view class="money">￥{{item.Price}}</view>
+            <view style="color: #999999;text-decoration: line-through;text-align: center;margin-top: 12rpx;">
+                ￥{{item.OldPrice}}</view>
+        </view>
+    </block>
+</view>

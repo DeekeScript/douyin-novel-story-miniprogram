@@ -1,0 +1,26 @@
+/* c:\Users\Administrator\miniprograms\main\pages\me\pay\pay.ttss */
+.container {
+    padding: 12px;
+    margin: 12px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    width: auto;
+    height: auto;
+}
+
+.container .baseTitle {
+    font-size: 18px;
+    color: #000000;
+}
+
+.container .baseTitle span {
+    font-size: 14px;
+    color: #aaaa33;
+}
+
+.container .detail {
+    margin-top: 12px;
+    color: #999999;
+    font-size: 13px;
+    line-height: 24px;
+}

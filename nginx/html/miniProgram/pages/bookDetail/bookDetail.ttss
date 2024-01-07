@@ -1,0 +1,133 @@
+/* c:\Users\Administrator\miniprograms\main\pages\bookDetail\bookDetail.ttss */
+.container{
+    color: #333333;
+    height: auto;
+    padding-bottom: 132rpx;
+}
+
+.container .member{
+    height: auto;
+}
+
+.container .baseTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 60rpx;
+    position: relative;
+}
+
+.container .baseTitle span:nth-child(1) {
+    font-size: 14px;
+    color: #aaaa33;
+}
+
+.container .list {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.container .list .content {
+    padding: 12px;
+    border: #aaaa33 solid 1px;
+    background-color: #f8f8f8;
+    width: calc(50% - 32px);
+    border-radius: 12px;
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.container .list .active {
+    background-color: #ffffee;
+}
+
+.container .list .content .tag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 13px;
+    background-color: #aaaa33;
+    color: #ffffff;
+    padding: 2px 10px;
+    border-top-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.container .list .content .title {
+    color: #000000;
+    text-align: center;
+}
+
+.container .list .content .money {
+    font-size: 20px;
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 6px;
+}
+
+.container .text {
+    font-size: 18px;
+    color: #000000;
+    line-height: 26px;
+    padding-bottom: 24rpx;
+}
+
+.container .bottom {
+    position: fixed;
+    margin: 0 -12px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    bottom: 0px;
+    border-top: #f0f0f0 solid 1px;
+    box-shadow: 0 2px 5px #999999;
+    background-color: #F8F8F8;
+}
+
+.container .bottom .func {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 12px;
+}
+
+.container .bottom .func view:nth-child(2) {
+    background-color: #dddddd;
+    width: calc(100% - 64px);
+    border-radius: 36px;
+}
+
+.container .bottom .func view:nth-child(2n+1) {
+    margin-top: 4px;
+    font-size: 16px;
+}
+
+.container .bottom .tab {
+    width: calc(100% - 48px);
+    padding: 12px 24px 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    display: flex;
+}
+
+.container .bottom view {
+    text-align: center;
+    font-size: 12px;
+}
+
+.container .bottom view span {
+    font-size: 24px;
+}
+
+.container .bottom view view {
+    margin-top: -4px;
+}
+
+.container .page{
+    display: flex;
+    padding: 24rpx 0;
+    border-top: #dddddd solid 2rpx;
+}

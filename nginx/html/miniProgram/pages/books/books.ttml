@@ -1,0 +1,12 @@
+<view class="container">
+    <view class="swiper-item" style="z-index: 9999;">
+        <image src="{{imageBaseUrl + setting.Values.Shuku_background_url}}" style="width: 100%;height: 112px;"></image>
+    </view>
+
+    <view class="input-block search" bindtap="gotoBookSearch" style="z-index: 9999;">
+        <span class="iconfont icon-sousuo" style="font-size: 64rpx;color: #8a8a8a;margin: 24rpx 16rpx;"></span>
+        <input class="ttui-input" maxlength="50" placeholder="搜索书名/口令码" bindfocus="getFocus" bindblur="onBlur" />
+    </view>
+
+    <bookList data-type="4"></bookList>
+</view>

@@ -1,0 +1,68 @@
+@import "/iconfont/ali.ttss";
+@import "/iconfont/family.ttss";
+
+page {
+    font-size: 14px;
+    line-height: 22px;
+    font-family: 'alibaba';
+    font-weight: normal;
+    letter-spacing: 0;
+    background-color: #F8F8F8;
+    color: #666666;
+    height: 100%;
+}
+
+.container {
+    padding: 24rpx;
+    background-color: #F8F8F8;
+    height: 100%;
+}
+
+.page-section {
+    margin-bottom: 32rpx;
+    margin: 0 auto 32rpx auto;
+    width: 95%;
+}
+
+.ttui-input {
+    height: 96rpx;
+    min-height: 96rpx;
+    line-height: 96rpx;
+}
+
+.input-block {
+    border-radius: 8px;
+    margin-bottom: 25rpx;
+}
+
+.tag-green {
+    padding: 4px 6px;
+    border-radius: 3px;
+    color: #6ba09f;
+    font-size: 13px;
+    background-color: #e2f0eb;
+}
+
+.tag-red {
+    padding: 4px 6px;
+    border-radius: 3px;
+    color: #c12f16;
+    font-size: 13px;
+    background-color: #e2f0eb;
+}
+
+.tag-yellow {
+    padding: 4px 6px;
+    border-radius: 3px;
+    color: #333333;
+    font-size: 13px;
+    background-color: #f8f8f8;
+}
+
+.tag-yellow-active {
+    padding: 4px 6px;
+    border-radius: 3px;
+    color: #333333;
+    font-size: 13px;
+    background-color: #d3e2be;
+}

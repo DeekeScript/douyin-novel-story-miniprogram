@@ -1,0 +1,26 @@
+/* c:\Users\Administrator\miniprograms\main\pages\login\login.ttss */
+.container {
+    padding: 48rpx;
+}
+
+.container .title {
+    font-size: 42rpx;
+    color: black;
+    font-weight: bold;
+    position: relative;
+}
+
+.container .btn {
+    margin-top: 200rpx;
+}
+
+.container .btn .text {
+    text-align: center;
+    padding-top: 14rpx;
+    font-size: 30rpx;
+}
+
+.container .read {
+    position: fixed;
+    bottom: 48rpx;
+}

@@ -1,0 +1,38 @@
+<!-- c:\Users\Administrator\miniprograms\main\component\myBookList\myBookList.ttml -->
+<scroll-view scroll-y="true" bindscrolltolower="scrolls" class="myBookList">
+    <view tt:if="{{items && items.length}}" class="edit">
+        <view bindtap="allChecked" style="display: {{edit?'block':'none'}};">
+            <checkbox checked={{allChecked}} />
+            全选
+        </view>
+        <view style="display: {{!edit?'block':'none'}};" bindtap="edit"><span style="font-size: 18px;"
+                class="iconfont icon-bianji1"></span>编辑</view>
+    </view>
+    <view class="content">
+        <block tt:for="{{items}}">
+            <view data-id="{{item['BookId']}}" bindtap="gotoBookDetail">
+                <view class="bookImage">
+                    <image mode="widthFix" src="{{imageBaseUrl+item['NovelPic']}}"></image>
+                </view>
+                <view class="title">{{item['NovelName']}}</view>
+                <view data-id="{{item.Id}}" bindtap="select" class="select" style="display: {{edit?'block':'none'}};">
+                    <checkbox checked={{item.checked}} />
+                </view>
+            </view>
+        </block>
+    </view>
+
+    <view tt:if="{{!items || !items.length}}" style="width:100%">
+        <view style="margin: 120rpx auto;width: 160rpx;text-align: center;color: #cccccc;">
+            <span style="font-size: 120rpx;" class="iconfont icon-sousuowenjian"></span>
+            <view style="margin-top: 12rpx;">暂无收藏~</view>
+        </view>
+    </view>
+
+    <view class="operateParent" style="display: {{edit?'block':'none'}};">
+        <view class="operate">
+            <view><button bindtap="edit" type="default" size="mini">取消</button></view>
+            <view><button bindtap="delete" type="primary" size="mini">删除</button></view>
+        </view>
+    </view>
+</scroll-view>

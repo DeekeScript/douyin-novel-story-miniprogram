@@ -1,0 +1,56 @@
+/* c:\Users\Administrator\miniprograms\main\pages\me\notice\notice.ttss */
+.container {
+    width: auto;
+    height: calc(100% - 24rpx);
+}
+
+.noNotice {
+    padding-top: 60%;
+}
+
+.noNotice view:first-child {
+    display: flex;
+    flex-direction: column;
+}
+
+.noNotice span:first-child {
+    font-size: 180rpx;
+    color: #999999;
+    text-align: center;
+}
+
+.noNotice span:nth-child(2) {
+    margin-top: 90rpx;
+    text-align: center;
+}
+
+.container {
+    background-color: #ffffff;
+    margin: 12px;
+    border-radius: 12px;
+    padding: 0;
+}
+
+.container .list .detail {
+    padding: 12px;
+    border-bottom: #f0f0f0 solid 1px;
+}
+
+.container .list .active {
+    background-color: bisque;
+}
+
+.container .list .detail .title {
+    font-size: 18px;
+    color: #000000;
+}
+
+.container .list .detail .content {
+    color: #999999;
+    margin-top: 12px;
+}
+
+.container .list .detail .time {
+    display: flex;
+    flex-direction: row-reverse;
+}

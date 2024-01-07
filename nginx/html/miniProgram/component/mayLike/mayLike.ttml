@@ -1,0 +1,18 @@
+<!-- c:\Users\Administrator\miniprograms\main\component\mayLike\mayLike.ttml -->
+<view class="container">
+    <view class="mayLike">
+        <view>猜你喜欢</view>
+        <view bindtap="changeLikeList">换一换 <span class="iconfont icon-huanyihuan"></span></view>
+    </view>
+
+    <view class="list">
+        <block tt:for="{{book}}">
+            <view data-id={{item.Id}} bindtap="showBookDetail" class="content">
+                <view>
+                    <image mode="widthFix" src="{{imageBaseUrl+item.NovelPic}}"></image>
+                </view>
+                <view>{{item.NovelName}}</view>
+            </view>
+        </block>
+    </view>
+</view>

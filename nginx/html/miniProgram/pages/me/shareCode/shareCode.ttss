@@ -1,0 +1,18 @@
+/* c:\Users\Administrator\miniprograms\main\pages\me\shareCode\shareCode.ttss */
+.container{
+    padding: 12px;
+    margin: 12px;
+    border-radius: 12px;
+    background-color: #ffffff;
+}
+
+.container input{
+    background-color: #f8f8f8;
+    font-size:16px;
+    padding: 6px 12px;
+    margin-top: 12px;
+}
+
+.container button{
+    margin-top: 12px;
+}

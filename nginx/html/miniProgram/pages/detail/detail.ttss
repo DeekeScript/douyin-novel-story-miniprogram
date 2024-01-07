@@ -1,0 +1,195 @@
+/* c:\Users\Administrator\miniprograms\main\pages\detail\detail.ttss */
+.container {
+    padding: 24rpx;
+    position: relative;
+    width: auto;
+    height: auto;
+    padding-bottom: 120rpx;
+}
+
+.container .book {
+    justify-content: space-between;
+}
+
+.container .book .bookDetail {
+    position: relative;
+}
+
+.container .book .bookDetails {
+    display: flex;
+    flex-direction: row;
+}
+
+.container .book .bookDetail .image {
+    width: 200rpx;
+    margin-right: 12px;
+}
+
+.container .book .bookDetail .image image {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.container .book .bookDetail .title {
+    color: #000000;
+}
+
+.container .book .bookDetail .tag {
+    color: #999999;
+}
+
+.container .book .bookDetail .titleParent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container .book .bookDetail .titleParent .type {
+    display: flex;
+}
+
+.container .book .bookDetail .titleParent .type span {
+    margin-right: 12px;
+}
+
+.container .book .bookDetail .kouling {
+    width: 200rpx;
+    position: absolute;
+    right: 12rpx;
+    top: 0rpx;
+}
+
+.container .book .bookDetail .kouling image {
+    width: 100%;
+}
+
+.container .book .about {
+    margin-top: 12px;
+    font-size: 18px;
+    color: #000000;
+}
+
+.container .book .aboutDetail {
+    margin-top: 12px;
+    color: #999999;
+    font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+}
+
+.container .goodSelect {
+    margin-top: 12px;
+    font-size: 18px;
+    color: #000000;
+    border-top: #eeeeee solid 3px;
+    padding-top: 12rpx;
+}
+
+.container .goodSelect span {
+    font-size: 13px;
+    color: #666666;
+}
+
+.container .goodSelectDetail {
+    color: #999999;
+    margin-top: 24rpx;
+    font-size: 14px;
+    text-indent: 24px;
+    padding-bottom: 36rpx;
+}
+
+.comments {
+    font-size: 18px;
+    color: #000000;
+    border-top: #eeeeee solid 6rpx;
+    margin: 0 -24rpx;
+    padding: 24rpx;
+}
+
+.container .comments .title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .comments .title view:nth-child(2) {
+    font-size: 32rpx;
+    color: #666666;
+}
+
+.container .comments .comment-detail {
+    margin-top: 24rpx;
+}
+
+.container .comments .comment-detail .comment-user {
+    display: flex;
+    margin-bottom: 24rpx;
+}
+
+.container .comments .comment-detail .comment-user .avatar {
+    margin-top: 12rpx;
+    flex-grow: 1;
+}
+
+.container .comments .comment-detail .comment-user .avatar image {
+    width: 64rpx;
+    height: 64rpx;
+    border-radius: 32rpx;
+}
+
+.container .comments .comment-detail .comment-user .comment-content {
+    margin-left: 24rpx;
+    font-size: 28rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-grow: 40;
+    line-height: 50rpx;
+    color: #333333;
+}
+
+.container .comments .comment-detail .comment-user .comment-content view:nth-child(1) {
+    color: #666666;
+}
+
+.container .comments .comment-detail .comment-user .comment-content view:nth-child(3) {
+    text-align: right;
+    color: #666666;
+    width: 100%;
+}
+
+.container .bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 12px 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: #f8f8f8 solid 1px;
+    box-shadow: 0 3px 6px #999999;
+    width: calc(100% - 48px);
+    background-color: #ffffff;
+}
+
+.container .bottom .status span {
+    font-size: 28px;
+    color: #000000;
+    text-align: center;
+}
+
+.container .bottom .status view {
+    text-align: center;
+    font-size: 13px;
+}
+
+.container .bottom .startWatch {
+    width: 60%;
+}
+
+.container .bottom .startWatch button {
+    width: 100%;
+}

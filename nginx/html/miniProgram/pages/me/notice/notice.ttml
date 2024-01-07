@@ -1,0 +1,19 @@
+<!-- c:\Users\Administrator\miniprograms\main\pages\me\notice\notice.ttml -->
+<view tt:if="{{!items || !items.length}}" class="noNotice">
+    <view>
+        <span class="iconfont icon-sousuowenjian"></span>
+        <span>很抱歉，暂无公告~</span>
+    </view>
+</view>
+
+<scroll-view tt:else class="container" scroll-y="true" bindscrolltolower="scrolls">
+    <view class="list">
+        <block tt:for="{{items}}">
+            <view class="detail">
+                <view class="title">{{item.Title}}</view>
+                <view class="content">{{item.Content}}</view>
+                <view class="time"><span>{{item.CreatedAtShow}}</span></view>
+            </view>
+        </block>
+    </view>
+</scroll-view>

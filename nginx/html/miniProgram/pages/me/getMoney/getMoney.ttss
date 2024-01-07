@@ -1,0 +1,30 @@
+/* c:\Users\Administrator\miniprograms\main\pages\me\getMoney\getMoney.ttss */
+.container{
+    
+}
+
+.container .profit{
+    background-color: #ffffff;
+    padding: 12px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 18px;
+    color: #ff3333;
+}
+
+.container .profit view:first-child{
+    padding-top: 4px;
+}
+
+.container .detail{
+    margin-top: 24px;
+    line-height: 30px;
+}
+
+.container .detail view:first-child{
+    color: #000000;
+    font-size: 18px;
+    margin-bottom: 12px;
+}

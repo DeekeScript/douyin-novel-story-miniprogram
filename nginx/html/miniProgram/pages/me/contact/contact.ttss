@@ -1,0 +1,16 @@
+/* c:\Users\Administrator\miniprograms\main\pages\me\contact\contact.ttss */
+.container {
+    background-color: #ffffff;
+    margin: 12px;
+    padding: 0 12px 12px 12px;
+    border-radius: 12px;
+}
+
+.container view:nth-child(2) {
+    font-size: 18px;
+    margin: 12px 0;
+}
+
+.container view:nth-child(3) {
+    font-size: 18px;
+}

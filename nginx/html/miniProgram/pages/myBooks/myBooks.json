@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "书架",
+    "usingComponents": {
+        "myBooksList": "/component/myBookList/myBookList"
+    }
+}

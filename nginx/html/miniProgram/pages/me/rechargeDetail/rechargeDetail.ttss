@@ -1,0 +1,47 @@
+/* c:\Users\Administrator\miniprograms\main\pages\me\rechargeDetail\rechargeDetail.ttss */
+.container {
+    padding: 24rpx;
+    height: auto;
+    width: auto;
+}
+
+.container .items {
+    background-color: #ffffff;
+    padding: 24rpx 12rpx;
+    border-radius: 12rpx;
+}
+
+.container .items .main {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.container .items .main .profile {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .items .main .profile .avatar {
+    width: 96rpx;
+}
+
+.container .items .main .profile .avatar image {
+    width: 100%;
+}
+
+.container .items .main .profile .nickname {
+    margin-left: 24rpx;
+}
+
+.container .items .time {
+    display: flex;
+    justify-content: space-between;
+    border-top: #f8f8f8 solid 1px;
+    padding: 12rpx 24rpx 0 24rpx;
+    color: #999999;
+}
+
+.container .items:nth-child(n+2) {
+    margin-top: 24rpx;
+}

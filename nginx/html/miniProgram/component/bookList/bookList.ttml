@@ -1,0 +1,178 @@
+<!-- c:\Users\Administrator\miniprograms\main\component\bookList\bookList.ttml -->
+<view class="bookList" tt:if="{{dataType==1}}">
+    <view>
+        <view class="top">
+            <view class="h2">{{dataTitle}}</view>
+            <view class="change" bindtap="reloadData"><span style="font-size: 16px;"
+                    class="iconfont icon-huanyihuan1"></span>换一换</view>
+        </view>
+        <view data-id="{{items[0]['Id']}}" class="book" bindtap="bookDetail">
+            <view class="bookImage">
+                <image mode="widthFix" src="{{imageBaseUrl+items[0]['NovelPic']}}"></image>
+            </view>
+            <view class="bookDetail">
+                <view class="title">{{items[0]['NovelName']}}</view>
+                <view class="content">{{items[0]['Desc']}}</view>
+                <view class="type">
+                    <span tt:if="{{items[0]['Cate'] && items[0]['Cate'][0]}}"
+                        class="tag-green">{{items[0]['Cate'][0]}}</span>
+                    <span style="margin-left:12rpx;" tt:if="{{items[0]['Cate'] && items[0]['Cate'][0]}}"
+                        class="tag-red">{{items[0]['Cate'][0]}}</span>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="bookBottom">
+        <block tt:for="{{items}}">
+            <view data-id="{{item.Id}}" bindtap="bookDetail" tt:if="{{index>0}}" class="book">
+                <view class="bookImage">
+                    <image mode="widthFix" src="{{imageBaseUrl+item['NovelPic']}}"></image>
+                </view>
+                <view class="title">{{item.NovelName}}</view>
+                <view class="type">
+                    <span tt:if="{{item['Cate'] && item['Cate'][0]}}" class="tag-green">{{item['Cate'][0]}}</span>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>
+
+<view class="bookList" tt:if="{{dataType==2}}">
+    <view>
+        <view class="top">
+            <view class="h2">{{dataTitle}}</view>
+            <view class="change" bindtap="reloadData"><span style="font-size: 16px;"
+                    class="iconfont icon-huanyihuan1"></span>换一换</view>
+        </view>
+    </view>
+    <view class="bookBottom" style="margin-top:0px;flex-wrap:wrap;">
+        <block tt:for="{{items}}">
+            <view class="book" data-id="{{item.Id}}" bindtap="bookDetail">
+                <view class="bookImage">
+                    <image mode="widthFix" src="{{imageBaseUrl+item['NovelPic']}}"></image>
+                </view>
+                <view class="title">{{item['NovelName']}}</view>
+                <view class="type">
+                    <span tt:if="{{item['Cate'] && item['Cate'][0]}}" class="tag-green">{{item['Cate'][0]}}</span>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>
+
+<view class="bookList" tt:if="{{dataType==3}}">
+    <view>
+        <view class="top">
+            <view class="h2">{{dataTitle}}</view>
+        </view>
+    </view>
+    <view class="goodBook" style="margin-top:0px;">
+        <block tt:for="{{items}}">
+            <view class="book" data-id="{{item.Id}}" bindtap="bookDetail">
+                <view class="bookImage">
+                    <image mode="widthFix" src="{{imageBaseUrl+item['NovelPic']}}"></image>
+                </view>
+                <view class="title">{{item['NovelName']}}</view>
+                <view class="type">
+                    <span tt:if="{{item['Cate'] && item['Cate'][0]}}" class="tag-green">{{item['Cate'][0]}}</span>
+                    <span tt:if="{{item['Cate'] && item['Cate'][1]}}" class="tag-red">{{item['Cate'][1]}}</span>
+                    <span tt:if="{{item['Cate'] && item['Cate'][2]}}" class="tag-green">{{item['Cate'][2]}}</span>
+                </view>
+                <view class="content">{{item['Desc']}}</view>
+            </view>
+        </block>
+    </view>
+</view>
+
+<view class="bookList" tt:if="{{dataType==4}}" style="height: 100%;">
+    <view
+        style="position: fixed;width:calc(100%);top: 112px;padding-top:28px;background-color: #ffffff;margin: 0 -24rpx; padding-left: 12rpx;z-index: 9999;">
+        <view class="cate">
+            <view style="min-width: 76rpx;">分类</view>
+            <scroll-view scroll-x="true" style="width: calc(100% - 140rpx);padding-right: 12rpx; white-space: nowrap;">
+                <span style="white-space: nowrap;" bindtap="changeTag" data-id="" data-index={{0}}
+                    class="{{tagIndex===0?'tag-yellow-active':'tag-green'}}">全部</span>
+                <block tt:for="{{tagList}}">
+                    <span bindtap="changeTag" style="margin-left: 24rpx;white-space: nowrap;" data-index="{{index+1}}"
+                        data-id={{item.Id}}
+                        class="{{tagIndex-1===index?'tag-yellow-active':'tag-green'}}">{{item.Title}}</span>
+                </block>
+            </scroll-view>
+        </view>
+        <view class="sort">
+            <view style="min-width: 76rpx;">排序</view>
+            <scroll-view style="display: flex; flex-direction: row;">
+                <span data-sort={{0}} bindtap="changeSort"
+                    class="{{sortIndex===0?'tag-yellow-active':'tag-green'}}">潜力</span>
+                <span data-sort={{1}} bindtap="changeSort" style="margin-left: 24rpx;"
+                    class="{{sortIndex===1?'tag-yellow-active':'tag-green'}}">上新</span>
+            </scroll-view>
+        </view>
+        <view class="topTitle">
+            <view></view>
+            <view>
+                <span>{{sortIndex===0?'昨日销量爆款小说':'昨日上新潜力小说'}}</span>
+            </view>
+        </view>
+    </view>
+    <view style="margin-top: 216px;height: 100%;">
+        <view tt:if="{{!items || items.length===0}}">
+            <view style="text-align: center;font-size: 100rpx;color: #f8f8f8;padding-top:80rpx;"
+                class="iconfont icon-sousuowenjian"></view>
+            <view style="text-align: center;font-size: 24rpx;color: #999999;padding-bottom: 80rpx;padding-top: 36rpx;">
+                暂无结果</view>
+        </view>
+        <scroll-view scroll-y="true" bindscrolltolower="scrolls" style="height: 100%;">
+            <block tt:for="{{items}}">
+                <view class="book rankList" data-id="{{item.Id}}" bindtap="bookDetail" style="width: calc(100%);">
+                    <view class="rank" style="flex: 0 0 5%;">{{index+1}}</view>
+                    <view class="bookImage" style="flex: 0 0 20%;">
+                        <image mode="widthFix" src="{{imageBaseUrl+item['NovelPic']}}"></image>
+                    </view>
+                    <view class="bookDetail" style="flex: 0 0 68%;">
+                        <view class="title">{{item['NovelName']}}</view>
+                        <view class="content">{{item['Desc']}}</view>
+                        <view class="type">
+                            <span tt:if="{{item['Tag'] && item['Tag'][0]}}"
+                                class="tag-green">{{item['Cate'][0]}}</span>
+                            <span style="margin-left: 12rpx;" tt:if="{{item['Cate'] && item['Cate'][1]}}"
+                                class="tag-red">{{item['Cate'][1]}}</span>
+                            <span style="margin-left: 12rpx;" tt:if="{{item['Cate'] && item['Cate'][2]}}"
+                                class="tag-green">{{item['Cate'][2]}}</span>
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </scroll-view>
+    </view>
+</view>
+
+<view class="bookList" tt:if="{{dataType==5}}">
+    <view style="margin-top: -24rpx;">
+        <view style="padding: 12rpx 0 24rpx 0;font-size: 16px;color:#000000;">{{dataSearch?'搜索结果':dataTitle}}</view>
+        <view tt:if="{{!items || items.length===0}}">
+            <view style="text-align: center;font-size: 100rpx;color: #f8f8f8;padding-top:80rpx;"
+                class="iconfont icon-sousuowenjian"></view>
+            <view style="text-align: center;font-size: 24rpx;color: #999999;padding-bottom: 80rpx;padding-top: 36rpx;">
+                暂无结果</view>
+        </view>
+        <view tt:for="{{items}}">
+            <view class="book rankList" data-id="{{item.Id}}" bindtap="bookDetail">
+                <view class="bookImage">
+                    <image mode="widthFix" src="{{imageBaseUrl+item['NovelPic']}}"></image>
+                </view>
+                <view class="bookDetail">
+                    <view class="title">{{item['NovelName']}}</view>
+                    <view class="content">{{item['Desc']}}</view>
+                    <view class="type">
+                        <span tt:if="{{item['Cate'] && item['Cate'][0]}}" class="tag-green">{{item['Cate'][0]}}</span>
+                        <span style="margin-left: 12rpx;" tt:if="{{item['Cate'] && item['Cate'][1]}}"
+                            class="tag-red">{{item['Cate'][1]}}</span>
+                        <span style="margin-left: 12rpx;" tt:if="{{item['Cate'] && item['Cate'][2]}}"
+                            class="tag-yellow">{{item['Cate'][2]}}</span>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

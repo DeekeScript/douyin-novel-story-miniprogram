@@ -1,0 +1,18 @@
+<!-- c:\Users\Administrator\miniprograms\main\pages\me\pay\pay.ttml -->
+<scroll-view class="container">
+    <view class="member">
+        <view tt:if="{{openCoin}}" class="baseTitle">充值书币</view>
+        <pay tt:ref="setCoinParams" bind:myevent="onMyEvent" data-type="1"></pay>
+    </view>
+
+    <view class="member">
+        <view tt:if="{{openMember}}" class="baseTitle">购买会员 <span>最低{{miniPrice}}元/天</span></view>
+        <pay tt:ref="setMemberParams" bind:myevent="onMyEvent" data-type="0"></pay>
+    </view>
+
+    <view class="detail">
+        <view>1.未满18周岁的用户请谨慎购买；</view>
+        <view>2.VIP会员属于虚拟商品，一旦购买不做退换；</view>
+        <view>3.如有问题请在“我的”页面联系客服。</view>
+    </view>
+</scroll-view>

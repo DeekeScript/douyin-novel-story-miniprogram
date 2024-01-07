@@ -1,0 +1,50 @@
+/* c:\Users\Administrator\miniprograms\main\component\pay\pay.ttss */
+
+
+.pay-list {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 28rpx;
+}
+
+.pay-list .content {
+    padding: 12px;
+    border: #aaaa33 solid 1px;
+    background-color: #f8f8f8;
+    width: calc(50% - 32px);
+    border-radius: 12px;
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.pay-list .active {
+    background-color: #ffffee;
+}
+
+.pay-list .content .tag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 13px;
+    background-color: #aaaa33;
+    color: #ffffff;
+    padding: 2px 10px;
+    border-top-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.pay-list .content .title {
+    color: #000000;
+    text-align: center;
+    padding-top: 28rpx;
+}
+
+.pay-list .content .money {
+    font-size: 20px;
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 6px;
+}

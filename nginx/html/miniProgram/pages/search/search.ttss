@@ -1,0 +1,20 @@
+.container{
+  background-color: #ffffff!important;
+  height: 100%;
+  width: auto;
+}
+
+.search {
+  background-color: #f3f3f3!important;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.search input{
+  width: 65%;
+}
+
+.search button{
+  margin:0;
+}

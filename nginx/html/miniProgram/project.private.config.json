@@ -1,0 +1,112 @@
+{
+    "condition": {
+        "miniprogram": {
+            "current": -1,
+            "list": [
+                {
+                    "id": 1701492530877,
+                    "name": "pages/myBooks/index",
+                    "pathName": "pages/myBooks/index",
+                    "query": "",
+                    "scene": "990001",
+                    "launchFrom": "scan",
+                    "location": "qr_code",
+                    "mockUpdateType": "Noupdate"
+                },
+                {
+                    "id": 1701495365227,
+                    "name": "pages/books/index",
+                    "pathName": "pages/books/index",
+                    "query": "",
+                    "scene": "990001",
+                    "launchFrom": "scan",
+                    "location": "qr_code",
+                    "mockUpdateType": "Noupdate"
+                },
+                {
+                    "id": 1701505614575,
+                    "name": "我的",
+                    "pathName": "pages/me/index",
+                    "query": "",
+                    "scene": "990001",
+                    "launchFrom": "scan",
+                    "location": "qr_code",
+                    "mockUpdateType": "Noupdate"
+                },
+                {
+                    "id": 1701523684794,
+                    "name": "pages/bookDetail/bookDetail",
+                    "pathName": "pages/bookDetail/bookDetail",
+                    "query": "",
+                    "scene": "990001",
+                    "launchFrom": "scan",
+                    "location": "qr_code",
+                    "mockUpdateType": "Noupdate"
+                },
+                {
+                    "id": 1701526042384,
+                    "name": "pages/detail/detail",
+                    "pathName": "pages/detail/detail",
+                    "query": "",
+                    "scene": "990001",
+                    "launchFrom": "scan",
+                    "location": "qr_code",
+                    "mockUpdateType": "Noupdate"
+                },
+                {
+                    "id": 1701571710623,
+                    "name": "pages/me/profile/profile",
+                    "pathName": "pages/me/profile/profile",
+                    "query": "",
+                    "scene": "990001",
+                    "launchFrom": "scan",
+                    "location": "qr_code",
+                    "mockUpdateType": "Noupdate"
+                },
+                {
+                    "id": 1702812652515,
+                    "name": "pages/login/login",
+                    "pathName": "pages/login/login",
+                    "query": "",
+                    "scene": "990001",
+                    "launchFrom": "scan",
+                    "location": "qr_code",
+                    "mockUpdateType": "Noupdate"
+                },
+                {
+                    "id": 1703335521553,
+                    "name": "广告解析",
+                    "pathName": "pages/bookCity/bookCity",
+                    "query": "ad_params=%7B%22cid%22%3A1650693294639131%2C%22log_extra%22%3A%7B%22convert_component_suspend%22%3A0%2C%22convert_id%22%3A1650693283285000%2C%22external_action%22%3A19%2C%22is_from_history%22%3Afalse%2C%22is_pack_v2%22%3Atrue%2C%22orit%22%3A1%2C%22placement%22%3A%22unknown%22%2C%22req_id%22%3A%22201911201708240100260770680A01D17F%22%2C%22rit%22%3A1%2C%22style_id%22%3A2310%2C%22style_ids%22%3A%5B2310%5D%2C%22van_package%22%3A130000005%7D%2C%22web_url%22%3A%22https%3A%2F%2Fwww.toutiao.com%2F%3Fadid%3D1650693294639115%5Cu0026creativeid%3D1650693294639131%5Cu0026creativetype%3D4%5Cu0026clickid%3DEJuQ19u_qfcCGKf2g74ZIPD89-vIATAMOAFCIjIwMTkxMTIwMTcwODI0MDEwMDI2MDc3MDY4MEEwMUQxN0ZIAQ%22%2C%22intercept_flag%22%3A2%7D&adid=1650693294639115&age=18&clickid=EJuQ19u_qfcCGKf2g74ZIPD89-vIATAMOAFCIjIwMTkxMTIwMTcwODI0MDEwMDI2MDc3MDY4MEEwMUQxN0ZIAQ&creativeid=1650693294639131&creativetype=4&name=lilei",
+                    "scene": "025003",
+                    "launchFrom": "internal_ad",
+                    "location": "jump_button",
+                    "mockUpdateType": "Noupdate"
+                },
+                {
+                    "id": 1703432063185,
+                    "name": "详情",
+                    "pathName": "pages/detail/detail",
+                    "query": "id=1",
+                    "scene": "025003",
+                    "launchFrom": "internal_ad",
+                    "location": "jump_button",
+                    "mockUpdateType": "Noupdate"
+                },
+                {
+                    "id": 1704039281507,
+                    "name": "测试分享章节",
+                    "pathName": "pages/bookDetail/bookDetail",
+                    "query": "id=1&index=5&is_share=1",
+                    "scene": "011007",
+                    "launchFrom": "scan",
+                    "location": "audit",
+                    "mockUpdateType": "Noupdate"
+                }
+            ]
+        }
+    },
+    "setting": {
+        "urlCheck": false
+    }
+}

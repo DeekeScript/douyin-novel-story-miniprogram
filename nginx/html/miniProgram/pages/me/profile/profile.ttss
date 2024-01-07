@@ -1,0 +1,40 @@
+/* c:\Users\Administrator\miniprograms\main\pages\me\profile\profile.ttss */
+.container .profile{
+    background-color: #ffffff;
+    padding: 12px;
+}
+
+.container .profile .head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 0;
+    border-bottom: #f0f0f0 solid 1px;
+}
+
+.container .profile .head view:first-child {
+    padding-top: 15rpx;
+    color: #000000;
+}
+
+.container .profile .head view:nth-child(2) {
+    width: 90rpx;
+}
+
+.container .profile .head view:nth-child(2) image {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.container .profile .nickname {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 26rpx 0;
+    border-bottom: #f0f0f0 solid 1px;
+}
+
+.container .profile .nickname view:first-child {
+    padding-top: 15rpx;
+    color: #000000;
+}

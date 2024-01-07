@@ -1,0 +1,43 @@
+<!-- c:\Users\Administrator\miniprograms\main\pages\me\watchRecord\watchRecord.ttml -->
+<scroll-view class="container" scroll-y="true" bindscrolltolower="scrolls">
+    <view tt:if="{{!items || items.length===0}}">
+        <view style="text-align: center;font-size: 130rpx;color: #dddddd;padding-top:80rpx;"
+            class="iconfont icon-sousuowenjian"></view>
+        <view style="text-align: center;font-size: 32rpx;color: #999999;padding-bottom: 80rpx;padding-top: 48rpx;">
+            暂无记录</view>
+    </view>
+    <view class="operate">
+        <view bindtap="allSelectF" tt:if="{{isEdit}}" style="display: block;">
+            <checkbox checked="{{allSelect}}" />
+            全选
+        </view>
+        <view tt:if="{{!isEdit && items && items.length}}" bindtap="edit"><span style="font-size: 18px;" class="iconfont icon-bianji1"></span>编辑
+        </view>
+    </view>
+    <block tt:for="{{items}}">
+        <view class="book" data-id="{{item.Id}}" bindtap="gotoDetail">
+            <view class="bookImage">
+                <image mode="widthFix" src="{{imageBaseUrl+item.NovelPic}}"></image>
+                <view tt:if="{{isEdit}}" data-id="{{item.Id}}" bindtap="select" class="select" style="display: block;">
+                    <checkbox checked="{{item.checked}}" />
+                </view>
+            </view>
+            <view class="bookDetail">
+                <view class="title">{{item.NovelName}}</view>
+                <view class="content">{{item.Desc}}</view>
+                <view class="tag">
+                    <block tt:for="{{cates}}" tt:for-index="idx" tt:for-item="cate">
+                        <span tt:if="{{cate.BookId==item.BookId}}" class="tag-green">{{cate.Title}}</span>
+                    </block>
+                </view>
+            </view>
+        </view>
+    </block>
+
+    <view tt:if="{{isEdit}}" class="operateParent" style="display: block;">
+        <view class="edit">
+            <view><button bindtap="edit" type="default" size="mini">取消</button></view>
+            <view><button bindtap="delete" type="primary" size="mini">删除</button></view>
+        </view>
+    </view>
+</scroll-view>

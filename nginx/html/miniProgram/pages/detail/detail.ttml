@@ -1,0 +1,76 @@
+<!-- c:\Users\Administrator\miniprograms\main\pages\detail\detail.ttml -->
+<scroll-view class="container" scroll-y="true" bindscrolltolower="scrolls">
+    <view class="book">
+        <view class="bookDetail">
+            <view class="bookDetails">
+                <view class="image">
+                    <image src="{{imageBaseUrl+book.book.NovelPic}}" mode="widthFix"></image>
+                </view>
+                <view class="titleParent">
+                    <view>
+                        <view class="title">{{book.book.NovelName}}</view>
+                        <view style="margin-top: 8rpx;"><span class="tag-red">{{book.book.IsEnd?'已完结':'连载'}}</span></view>
+                    </view>
+                    <view class="type">
+                        <block tt:for="{{book.cate}}">
+                            <span class="tag-green">{{item.Title}}</span>
+                        </block>
+                    </view>
+                </view>
+            </view>
+            <view class="kouling">
+                <image bindtap="copy" mode="widthFix" src="/images/dev/kouling.png"></image>
+            </view>
+        </view>
+        <view class="about">书籍简介</view>
+        <view class="aboutDetail">{{book.book.Desc}}</view>
+    </view>
+
+    <view style="height: 4px; margin: 0 -12px; background-color: #eeeeee;margin-top: 6rpx;"></view>
+    <mayLike bindmyevent="onMyEvent" tt:if="{{cate}}" data-cate={{cate}}></mayLike>
+    <view tt:if="{{book.book.GoodDetail}}" class="goodSelect">精选内容<span catch:tap="copyGoodDetail">(<span style="font-size: 14px;padding-left: 18rpx;"
+                class="iconfont icon-fuzhi3"></span> 复制)</span></view>
+    <view tt:if="{{book.book.GoodDetail}}" class="goodSelectDetail">{{book.book.GoodDetail}}</view>
+
+    <view class="comments" style="margin-top: 12rpx;">
+        <view class="title">
+            <view>用户点评</view>
+            <view bindtap="comment"><span class="iconfont icon-bianji"></span> 点评一下</view>
+        </view>
+        
+        <view tt:if="{{comments}}" class="comment-detail">
+            <block tt:for="{{comments}}">
+                <view class="comment-user">
+                    <view class="avatar">
+                        <image src="{{imageBaseUrl+item.Avatar}}" />
+                    </view>
+                    <view class="comment-content">
+                        <view>{{item.Nickname}}</view>
+                        <view>{{item.Content}}</view>
+                        <view>{{item.CreatedAtShow}}</view>
+                    </view>
+                </view>
+            </block>
+        </view>
+        <view tt:if="{{comments.length==0}}">
+            <view style="text-align: center;font-size: 100rpx;color: #eeeeee;padding-top:80rpx;"
+                class="iconfont icon-sousuowenjian"></view>
+            <view style="text-align: center;font-size: 24rpx;color: #999999;padding-top: 42rpx;">
+                暂无用户点评</view>
+        </view>
+    </view>
+
+    <view class="bottom">
+        <view class="status" style="color:{{book.userBookDetail.IsCollection==1?'#999999':'#333333'}}"
+            bindtap="joinBook" data-id={{book.book.Id}}>
+            <view><span style="color:{{book.userBookDetail.IsCollection==1?'#999999':'#333333'}}"
+                    class="iconfont icon-jiashujia-weijiashujia"></span></view>
+            <view>{{book.userBookDetail.IsCollection==1?'已在书架':'加入书架'}}</view>
+        </view>
+        <view class="startWatch">
+            <button data-id={{book.book.Id}} data-index={{book.userBookDetail.ViewChapter || 1}}
+                data-position={{book.userBookDetail.ViewIndex}} bindtap="readBook" type="primary"
+                size="mini">开始阅读</button>
+        </view>
+    </view>
+</scroll-view>

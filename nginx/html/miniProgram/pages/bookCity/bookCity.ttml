@@ -1,0 +1,46 @@
+<scroll-view class="container" scroll-y="true" bindscrolltolower="scrolls">
+    <view class="input-block search">
+        <span class="iconfont icon-sousuo" style="font-size: 64rpx;color: #8a8a8a;margin: 24rpx 16rpx;"></span>
+        <input class="ttui-input" maxlength="50" placeholder="搜索书名/口令码" bindfocus="gotoBookSearch" />
+    </view>
+
+    <view class="page-section">
+        <swiper easing-function="default" indicator-dots="{{true}}" indicator-color="rgba(0, 0, 0, .3)"
+            indicator-active-color="rgba(221, 101, 114, 1)" current="{{0}}" current-item-id="" previous-margin=""
+            next-margin="" display-multiple-items="{{1}}" autoplay="{{true}}" interval="{{3000}}" circular="{{true}}"
+            vertical="{{false}}" duration="{{duration}}" bindanimationfinish="animationFinish"
+            bindtransition="transition">
+            <block tt:for="{{banner}}">
+                <swiper-item>
+                    <view data-page={{item.Page}} bindtap="gotoBookDetail" class="swiper-item">
+                        <image src={{imageBaseUrl + item.ImageUrl}} mode="widthFix" style="width: 100%;"></image>
+                    </view>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+
+    <block tt:for="{{indexPage}}">
+        <bookList tt:if="{{item.Type==3}}" tt:ref="refHandler" data-cate-id={{item.CateId}} data-type="{{item.Type}}"
+            data-title="{{item.Title}}"></bookList>
+        <bookList tt:if="{{item.Type!=3}}" data-cate-id={{item.CateId}} data-type="{{item.Type}}"
+            data-title="{{item.Title}}"></bookList>
+    </block>
+
+    <view tt:if="{{showViewingData}}" class="viewing">
+        <view class="content">
+            <view class="close" bindtap="cancel">
+                <icon style="color: #ffffff;" class="tt-icon" type="cancel"></icon>
+            </view>
+            <view class="detail">
+                <view class="book">
+                    <view class="image">
+                        <image src="{{imageBaseUrl + showViewingData.NovelPic}}" mode="heightFix" />
+                    </view>
+                    <view class="title"><span>{{showViewingData.NovelName}}</span></view>
+                </view>
+                <view class="read"><button bindtap="viewBook" type="primary" size="mini">开始阅读</button></view>
+            </view>
+        </view>
+    </view>
+</scroll-view>
