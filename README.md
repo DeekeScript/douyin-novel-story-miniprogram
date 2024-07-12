@@ -1,4 +1,5 @@
 ﻿# 抖音小说小程序【模仿“谜鹿小说”】（抖音在线读物小程序，支持巨量投放平台）
+ <img src='https://home.deeke.top/Index/githubStatistic?name=github-novel' width=0 height=0 />
 ### 【我们有小说合作渠道|有网络出版权限】
 ### 后台展示
 
