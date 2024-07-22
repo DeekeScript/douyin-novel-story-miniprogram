@@ -102,7 +102,7 @@
         [douyin]下面的参数，都是根据小程序开发提供的参数，需要自己在抖音开放平台寻找即可
 
 ### 目前抖音小说小程序已经有线上案例，有需要请联系商务：
-<img alt="docker服务" src="./image/yize.jpg" title="docker服务" width="30%"/>
+<img alt="docker服务" src="./image/weixin.jpg" title="docker服务" width="30%"/>
 
 ### 本程序由8年资深软件工程师开发【团队正在招募一些有业余时间的软件工程师（PHP，Python，Golang，Android，IOS，JavaScript，逆向工程师等）共图大业~】：
 <img alt="docker服务" src="./image/weixin.jpg" title="docker服务" width="30%"/>
